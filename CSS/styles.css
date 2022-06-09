@@ -226,8 +226,7 @@ body {
    color: var(--contrast-text);
 }
 
-.button,
-.button-modal {
+.button {
    cursor: pointer;
 
    background-color: var(--accent-text-color);
@@ -269,21 +268,22 @@ body {
    left: 0;
    width: 100%;
    height: 100%;
-   transition: opacity 250ms, visibility 250ms;
    background-color: rgba(0, 0, 0, 0.1);
 
    opacity: 1;
-   transition: opacity 500ms var(--timing-function);
-}
 
-.backdrop.is-hidden {
-   opacity: 1;
-   pointer-events: none;
-   visibility: hidden;
+   transition: opacity 1000ms var(--timing-function),
+      visibility 1000ms var(--timing-function);
 }
 
 .backdrop.is-hidden .modal {
-   transform: translate(-50%, -50%) scale(0.2);
+   transform: translate(-50%, -50%) scale(0);
+}
+
+.is-hidden {
+   opacity: 0;
+   pointer-events: none;
+   visibility: hidden;
 }
 
 .modal {
@@ -297,29 +297,38 @@ body {
    background-color: var(--secondary-background-two);
    border-radius: 4px;
 
-   transition: transform 250ms var(--timing-function);
+   transition: transform 250ms var(--timing-function), opacity 2500ms,
+      visibility 2500ms;
    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
       0px 2px 1px rgb(0 0 0 / 20%);
 }
 
 .button-modal {
-   margin-top: 20px;
-   margin-right: 20px;
-}
+   position: absolute;
+   top: 10px;
+   right: 10px;
 
-.button-modal::before {
-   content: "";
-   width: 20px;
-   height: 20px;
-   background-image: url(../images/close.svg);
-   background-size: contain;
-   margin-right: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 6px;
+
+   background-color: var(--accent-text-color);
+   border: 1px solid var(--accent-text-color);
+   border-radius: 50%;
+
+   cursor: pointer;
+
+   transition: shadow 250ms var(--timing-function);
 }
 
 .button-modal:hover,
 .button-modal:focus {
    background-color: yellowgreen;
-   transition: background-color 500ms var(--timing-function);
+   fill: var(--accent-text-color);
+
+   transition: background-color 250ms var(--timing-function),
+      fill 250ms var(--timing-function) 250ms;
 }
 
 /* ----------Our benefits---------- */
