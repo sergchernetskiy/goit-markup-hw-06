@@ -319,16 +319,15 @@ body {
 
    cursor: pointer;
 
-   transition: shadow 250ms var(--timing-function);
+   transition: shadow 250ms var(--timing-function),
+      background-color 250ms var(--timing-function),
+      fill 250ms var(--timing-function) 250ms;
 }
 
 .button-modal:hover,
 .button-modal:focus {
    background-color: yellowgreen;
    fill: var(--accent-text-color);
-
-   transition: background-color 250ms var(--timing-function),
-      fill 250ms var(--timing-function) 250ms;
 }
 
 /* ----------Our benefits---------- */
