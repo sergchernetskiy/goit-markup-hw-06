@@ -578,16 +578,11 @@
                         name="user-email"
                         id="user-email"
                         required
-                        placeholder=""
+                        placeholder="E-mail"
                      />
-                     <label for="user-email" class="sub-label"
-                        >E-mail</label
-                     >
+                     <label for="user-email" class="sub-label"></label>
                      <button type="submit" class="sub-btn">
                         Подписаться
-                        <!--<svg class="sub-icon" width="24" height="24">
-                           <use href="./images/icons.svg#icon-send"></use>
-                        </svg>-->
                      </button>
                   </div>
                </div>
@@ -649,7 +644,7 @@
                   />
                   <label for="user-email" class="form-label">Почта</label>
                </div>
-               <div class="form-field">
+               <div class="form-area">
                   <textarea
                      name="user-text"
                      id="user-text"
@@ -661,27 +656,25 @@
                   >
                </div>
                <div class="form-agreement">
-                  <div class="agree-checkbox">
+                  <label class="agreement-checkbox">
                      <input
                         type="checkbox"
                         class="checkbox"
                         name="agree-checkbox"
-                        id="agree-checkbox"
                      />
-                     <label
-                        for="agree-checkbox"
-                        class="checkbox-label"
-                     ></label>
-                  </div>
-                  <p class="agreement-text">
-                     Соглашаюсь с рассылкой и принимаю
-                  </p>
-                  <a href="" class="agreement-link">Условия договора</a>
+                     <svg class="agreement-icon" width="16" height="15">
+                        <use href="./images/icons.svg#icon-check"></use>
+                     </svg>
+                     <span class="agreement-text"
+                        >Соглашаюсь с рассылкой и принимаю</span
+                     >
+                     <a href="" class="agreement-link">Условия договора</a>
+                  </label>
                </div>
-               <button type="submit" class="submit-modal-btn">
-                  Отправить
-               </button>
             </form>
+            <button type="submit" class="submit-modal-btn">
+               Отправить
+            </button>
          </div>
       </div>
       <script src="./js/modal.js"></script>
