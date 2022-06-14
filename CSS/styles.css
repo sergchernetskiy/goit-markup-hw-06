@@ -595,10 +595,6 @@ img {
    align-items: baseline;
 }
 
-.footer-contacts:not(:last-child) {
-   margin-right: 70px;
-}
-
 .footer {
    padding-top: 60px;
    padding-bottom: 60px;
@@ -622,7 +618,9 @@ img {
 }
 
 .adress {
+   margin-right: 70px;
    margin-bottom: 9px;
+   width: 231px;
 
    font-weight: 400;
    font-style: normal;
@@ -644,7 +642,8 @@ img {
    margin-bottom: 9px;
 }
 
-.message {
+.message,
+.sub-title {
    padding-bottom: 20px;
 
    font-weight: 700;
@@ -657,6 +656,7 @@ img {
 .footer-soc-list {
    display: flex;
    justify-content: center;
+   margin-right: 93px;
 }
 
 .footer-soc-item {
@@ -699,6 +699,86 @@ img {
 .footer-soc-link:focus-visible {
    outline: 2px solid var(--accent-text-color);
    border-radius: 4px;
+}
+
+.sub-field {
+   position: relative;
+}
+
+.sub-input {
+   position: absolute;
+   width: 358px;
+   height: 50px;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   border-radius: 4px;
+   background-color: var(--secondary-background-one);
+   padding: 15px 16px;
+
+   transform: translateY(20px);
+}
+
+.sub-input:focus-visible {
+   outline: 2px solid var(--accent-text-color);
+   border-radius: 4px;
+}
+
+.sub-label {
+   position: absolute;
+   top: 35px;
+   left: 16px;
+
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.25;
+   color: rgba(255, 255, 255, 0.6);
+}
+
+.sub-btn {
+   position: absolute;
+   top: 20px;
+   left: 370px;
+   display: flex;
+   align-items: center;
+
+   background-color: var(--accent-text-color);
+   border: 2px solid var(--accent-text-color);
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+   margin: 0 auto;
+   padding: 8px 28px 8px 29px;
+
+   font-family: inherit;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 1.88;
+   letter-spacing: 0.06em;
+   color: var(--contrast-text);
+
+   cursor: pointer;
+
+   transition: color 250ms var(--timing-function),
+      shadow 250ms var(--timing-function);
+}
+
+.sub-btn:hover,
+.sub-btn:focus {
+   background: #188ce8;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+}
+
+.sub-btn:focus-visible {
+   outline: 1px solid #188ce8;
+   border-radius: 4px;
+}
+
+.sub-btn::after {
+   content: "";
+   width: 24px;
+   height: 24px;
+   margin-left: 10px;
+   background-image: url(../images/icon-send.svg);
+   background-size: contain;
 }
 
 /* ----------Portfolio---------- */
