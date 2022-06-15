@@ -603,45 +603,49 @@
                   Оставьте свои данные, мы вам перезвоним
                </p>
                <div class="form-field">
-                  <svg class="form-icon" width="18" height="18">
-                     <use href="./images/icons.svg#icon-person"></use>
-                  </svg>
                   <input
                      type="text"
                      class="form-input"
                      required
+                     title="Юрий"
                      name="user-name"
                      id="user-name"
                      placeholder=" "
                   />
-                  <label for="user-name" class="form-label">Имя</label>
+                  <svg class="form-icon" width="18" height="18">
+                     <use href="./images/icons.svg#icon-person"></use>
+                  </svg>
+                  <label for="user-name" autofocus class="form-label"
+                     >Имя</label
+                  >
                </div>
                <div class="form-field">
-                  <svg class="form-icon" width="18" height="18">
-                     <use href="./images/icons.svg#icon-phone"></use>
-                  </svg>
                   <input
-                     type="tel"
+                     type="number"
                      class="form-input"
                      required
+                     title="+380 67 111 2211"
                      name="user-tel"
                      id="user-tel"
                      placeholder=" "
                   />
+                  <svg class="form-icon" width="18" height="18">
+                     <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
                   <label for="user-tel" class="form-label">Телефон</label>
                </div>
                <div class="form-field">
-                  <svg class="form-icon" width="18" height="18">
-                     <use href="./images/icons.svg#icon-email"></use>
-                  </svg>
                   <input
                      type="email"
                      class="form-input"
-                     required
+                     title="user@gmail.com"
                      name="user-email"
                      id="user-email"
                      placeholder=" "
                   />
+                  <svg class="form-icon" width="18" height="18">
+                     <use href="./images/icons.svg#icon-email"></use>
+                  </svg>
                   <label for="user-email" class="form-label">Почта</label>
                </div>
                <div class="form-area">
@@ -662,8 +666,11 @@
                         class="checkbox"
                         name="agree-checkbox"
                      />
-                     <svg class="agreement-icon" width="16" height="15">
+                     <svg class="check-icon" width="16" height="15">
                         <use href="./images/icons.svg#icon-check"></use>
+                     </svg>
+                     <svg class="checked-icon" width="16" height="15">
+                        <use href="./images/icons.svg#icon-checked"></use>
                      </svg>
                      <span class="agreement-text"
                         >Соглашаюсь с рассылкой и принимаю</span
