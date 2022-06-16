@@ -122,8 +122,7 @@ body {
 .site-nav .link {
    color: var(--primary-text-color);
 
-   transition: color 250ms var(--timing-function),
-      drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+   transition: color 250ms var(--timing-function);
 }
 
 .site-nav .current {
@@ -314,6 +313,7 @@ body {
    justify-content: center;
    padding: 6px;
 
+   background-color: transparent;
    border: 1px solid var(--accent-text-color);
    border-radius: 50%;
 
@@ -438,13 +438,15 @@ body {
 
 .checkbox {
    position: absolute;
+   white-space: nowrap;
    width: 1px;
    height: 1px;
-   margin: -1px;
-   padding: 0;
-   border: 0;
-   clip: rect(0 0 0 0);
    overflow: hidden;
+   border: 0;
+   padding: 0;
+   clip: rect(0 0 0 0);
+   clip-path: inset(50%);
+   margin: -1px;
 }
 
 .check-icon,
